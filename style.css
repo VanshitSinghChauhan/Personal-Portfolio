@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background: #353232;
+    color: #F9FAFB;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.header-text{
+    font-size: 15px;
+}
+
+.header-text p{
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2.5px 2.5px 8px #080808;
+    color:  #71fdc5;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+nav ul{
+    margin: 0px 50px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background: #EC4899;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+.logo{
+    max-height: 50%;
+}
+.container{
+    padding: 10px 10%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px; 
+}
+
+/*--------   ABOUT   --------*/
+#about{
+    padding: 100px 0 150px 0;
+    color: #ffffff;
+}
+.row{
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-col-2 p{
+    padding-top: 40px;
+    font-size: 30px;
+    text-align: center; 
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin: auto;
+    font-size: 50px !important;
+    font-weight: 600;
+    cursor: pointer;
+}   
+
+.education-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.education-box{
+    flex: 1;
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 100px
+}
+
+.education-box:hover{
+    color: #080808;
+    background-color: #bc6fcb;
+    transform: translateY(-10px);
+}
+
+.education-box h3{
+    font-size: 26px;
+}
+
+.education-box p{
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.education-box span{
+    color: #71fdc5;
+    font-size: 18px;
+}
+@media (max-width: 768px){
+    .education-container{
+        flex-direction: column;
+    }
+}
+
+/*------Skills------*/
+
+.heading{
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 1.5rem;
+}
+.skills span{
+    color: rgb(210, 176, 241)
+}
+
+.skills {
+    background-color: var(--bg-color);
+    margin-bottom: 20px;
+}
+.skills .container {
+    display: grid;
+    background: var(--main-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2% 3%;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills .container .lang {
+    padding: 10px;
+    border-radius: 1rem;
+    background: var(--bg-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+  
+.skills .container .lang:hover {
+    box-shadow: 0 4px 10px white;
+    transform: scale(1.03);
+}
+  
+.skills .container .lang .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+  
+.skills .container .lang .info span {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+#skillsContainer {
+    display: grid;
+    /* This creates 2 equal columns */
+    grid-template-columns: repeat(2, 1fr); 
+    /* This adds space between your skill boxes */
+    gap: 2rem; 
+    padding: 2rem;
+}
+.skills .container .lang .info img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  @media (max-width: 600px) {
+    .skills .container .row {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 1rem;
+      padding: 2rem 0.2rem 2rem 0.2rem;
+      gap: 1rem;
+    }
+  
+    .skills .container {
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+  
+#portfolio{
+    padding: 40px 0px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform(0.5s);
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+
+/*--------------------------------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size:18px;
+    border-radius: 8px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: auto;
+}
+ /* -----------Mobile View---------- */
+nav .fas{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(./image/background_image.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;   
+    }
+    
+    #sidemenu {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #333;
+        width: 200px;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .fas.fa-times {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    nav > i.fa-bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1 .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
